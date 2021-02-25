@@ -32,6 +32,9 @@ public class RemoveNthNode {
         int fromEnd = length -n + 1; //node to remove [4]
         while(current != null){
             i++;
+            if(fromEnd == 1){ // if removing the first node
+                return head.next;
+            }
             if(i == (fromEnd-1)){ //i = node before node to be removed
                 current.next = current.next.next; //point node 3 to node 5 for current.next 
             }
