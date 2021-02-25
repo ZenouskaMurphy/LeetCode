@@ -15,7 +15,25 @@ It is guaranteed that the node to be deleted is not a tail node in the list.
 
 class DeleteNode{
     public void deleteNode(ListNode node) {
-        node.val = node.next.val;
-        node.next = node.next.next;  
+        //get length of list [first iteration]
+        ListNode current = head;
+        int length = 0;
+        while(current != null){
+            current = current.next;
+            length++;
+        }
+        
+        //remove n from list [second iteration]
+        current = head;
+        int i = 0;
+        int fromEnd = length -n + 1; // node to remove
+        while(current != null){
+            i++;
+            if(i == (fromEnd-1)){ //if i = node before node to remove 
+                current.next = current.next.next; //point node 3 to node 5 for current.next 
+            }
+            current = current.next; //current node will then be node 5 for next iteration 
+        }
+        return head;
     }
 }
