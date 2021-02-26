@@ -1,4 +1,4 @@
-/* 
+/* COMPLETED
 Reverse a singly linked list.
 */
 

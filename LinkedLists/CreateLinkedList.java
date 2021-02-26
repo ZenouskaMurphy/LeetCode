@@ -1,3 +1,4 @@
+/*COMPLETED
 /* Code for creating linked list from scratch*/
 
 public class CreateLinkedList {

@@ -1,4 +1,4 @@
-/*
+/*COMPLETED
 Given a singly linked list, determine if it is a palindrome.
 
 Input: 1->2->2->1
@@ -7,6 +7,17 @@ Output: true
 Input: 1->2
 Output: false
 */
+
+
+/**
+ // Definition for singly-linked list.
+ public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+
 import java.util.Stack;
 
 public class PalindromeLinkedList {
