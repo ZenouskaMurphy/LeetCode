@@ -1,7 +1,9 @@
 /*COMPLETED
 /* Code for creating linked list from scratch*/
 
-public class CreateLinkedList {
+public class LinkedList {
+
+//////////////////////////////////// CREATION OF LINKED LIST ////////////////////////////////////////////////////
 
     //Creating class for each node in a linkedlist 
     class Node{
@@ -19,24 +21,27 @@ public class CreateLinkedList {
     public Node head = null;
     public Node tail = null;
 
+//////////////////////////////////// ADD NODE TO LINKEDLIST ////////////////////////////////////////////////////
+
     //Method to add node to LinkedList
     public void addNode(int data){
         Node newNode = new Node(data);
 
-        //check LinkedList to see if list is empty, if it is newNode is now the head and tail
+        //check LinkedList to see if list is empty, if it is - point head and tail to new node
         if(head == null){
             head = newNode;
             tail = newNode;
         }
-        //if LinkedList is not empty, add newNode to the end of current List (after tail)
+        //if LinkedList is not empty,
         else{
+            //current tail will now point to newNode
             tail.next = newNode;
+            //newNode is now the tail
             tail = newNode;
         }
     }
 
-
-    /////////////////////////////////// OPERATIONS on LinkedList    //////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////// COUNT NODES IN LINKEDLIST ////////////////////////////////////////////////////
     
     public int countNodes(){
         int number = 0;
@@ -47,6 +52,8 @@ public class CreateLinkedList {
         }
         return number;
     }
+
+//////////////////////////////////// DISPLAY NODES IN LINKEDLIST ////////////////////////////////////////////////////
 
     public void displayNodes(){
      Node current = head;
@@ -63,7 +70,7 @@ public class CreateLinkedList {
 
     public static void main(String[] args){
         //Call class name here
-        CreateLinkedList ll = new CreateLinkedList();
+        LinkedList ll = new LinkedList();
 
         ll.addNode(1);
         ll.addNode(2);
