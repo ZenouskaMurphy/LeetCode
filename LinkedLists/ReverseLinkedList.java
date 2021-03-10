@@ -12,6 +12,7 @@ Reverse a singly linked list.
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
 class ReverseLinkedList{
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;   //prev = current -1

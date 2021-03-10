@@ -3,6 +3,8 @@ Code for creating binary search tree from scratch*/
 
 public class CreateTree{
 
+//////////////////////////////////// CREATION OF BST ////////////////////////////////////////////////////
+
     //Creating class for each node in tree
     class Node{
         int data;
