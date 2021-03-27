@@ -14,6 +14,6 @@ public class MaximumDepth {
         int rightDepth = maxDepth(root.right);
 
         int maxDepth = Math.max(leftDepth, rightDepth);
-        return maxDepth + 1;
+        return maxDepth + 1; //+1 accounts for root node
     }
 }

@@ -10,6 +10,10 @@ Both the left and right subtrees must also be binary search trees.
 
 class ValidateTree {
     /*Recursive Solution*/
+    public boolean isValidBST(TreeNode root){
+        return validate(root, null, null);
+    }
+
     public boolean validate(TreeNode root, Integer min, Integer max){
         //empty trees are valid BSTs
         if(root == null){
@@ -19,10 +23,6 @@ class ValidateTree {
         if((min != null && root.val <= min) || (max != null && root.val >= max)){
             return false;
         }
-        return validate(root.left, min, root.val) && validate(root.right, root.val, max);
-        
-    }
-    public boolean isValidBST(TreeNode root){
-      return validate(root, null, null);
+        return validate(root.left, min, root.val) && validate(root.right, root.val, max);   
     }
 }
