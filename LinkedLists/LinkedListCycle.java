@@ -5,18 +5,23 @@ There is a cycle in a linked list if there is some node in the list that can be 
 
 Return true if there is a cycle in the linked list. Otherwise, return false.
 */
-
-/**
- // Definition for singly-linked list.
- public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
 import java.util.HashSet;
-
 public class LinkedListCycle {
+
+    //Definition for singly-linked list.
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        public ListNode(int val){
+            this.val = val;
+            this.next = null;
+        }
+    }
+    public Node head = null;
+    public Node tail = null;
+
+
     public boolean hasCycle(ListNode head) {
         /*Hashing Solution*/
         //create hash table
