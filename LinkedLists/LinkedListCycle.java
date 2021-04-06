@@ -9,11 +9,11 @@ import java.util.HashSet;
 public class LinkedListCycle {
 
     //Definition for singly-linked list.
-    public class ListNode {
+    public class Node {
         int val;
-        ListNode next;
+        Node next;
 
-        public ListNode(int val){
+        public Node(int val){
             this.val = val;
             this.next = null;
         }
@@ -22,7 +22,7 @@ public class LinkedListCycle {
     public Node tail = null;
 
 
-    public boolean hasCycle(ListNode head) {
+    public boolean hasCycle(Node head) {
         /*Hashing Solution*/
         //create hash table
         //iterate through list and add node addresses to hash table
@@ -30,9 +30,9 @@ public class LinkedListCycle {
         //if so = True [Proves there is a cycle]
         //if not = False
 
-        HashSet<ListNode> hashSet = new HashSet<ListNode>();
+        HashSet<Node> hashSet = new HashSet<>();
 
-        ListNode current = head;
+        Node current = head;
         while(current != null){
             if(hashSet.contains(current)){
                 return true;

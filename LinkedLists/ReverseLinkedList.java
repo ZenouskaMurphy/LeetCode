@@ -5,11 +5,11 @@ Reverse a singly linked list.
 class ReverseLinkedList{
 
     //Definition for singly-linked list.
-    public class ListNode {
+    public class Node {
         int val;
-        ListNode next;
+        Node next;
 
-        public ListNode(int val){
+        public Node(int val){
             this.val = val;
             this.next = null;
         }
@@ -18,14 +18,15 @@ class ReverseLinkedList{
     public Node tail = null;
      
 
-    public ListNode reverseList(ListNode head) {
-        ListNode prev = null;   //prev = current -1
-        ListNode curr = head;   //current iterates from head position to tail position [current = 0] 
-        while (curr != null) {
-            ListNode nextTemp = curr.next;  //next = current +1
-            curr.next = prev;
-            prev = curr;
-            curr = nextTemp;
+    public Node reverseList(Node head) {
+        Node prev = null;       //prev = current -1
+        Node current = head;    //current iterates from head position to tail position [current = 0] 
+        Node next = null;       //next = current + 1
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
         }
         return prev;
     }

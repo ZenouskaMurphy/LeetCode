@@ -4,22 +4,25 @@ Input: head = [1,2,3,4,5], n = 2
 Output: [1,2,3,5]
 */
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
-
 public class RemoveNthNode {
 
-    public ListNode removeNthFromEnd(ListNode head, int n) {
+    //Definition for singly-linked list.
+    public class Node{
+        int val;
+        Node next;
+
+        public Node(int val){
+            this.val = val;
+            this.next = null;
+        }
+    }
+    public Node head = null;
+    public Node tail = null;
+
+
+    public Node removeNthFromEnd(Node head, int n) {
         //get length of list [first iteration]
-        ListNode current = head;
+        Node current = head;
         int length = 0;
         while(current != null){
             current = current.next;
