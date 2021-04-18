@@ -14,6 +14,8 @@ Output: 0
 Explanation: The altitudes are [0,-4,-7,-9,-10,-6,-3,-1]. The highest is 0.
 */
 
+import java.util.Arrays;
+
 public class HighestAltitude {
     public int largestAltitude(int[] gain) {
         int reorder = 0;
